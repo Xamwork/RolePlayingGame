@@ -8,12 +8,12 @@ public class Player extends Character{
 
     public Player(String name, int health, int gold, int agility, int experience, int strength, int lvl) {
         this.name = name;
-        this.health = 500;
-        this.gold = 50;
-        this.agility = 20;
-        this.experience = 0;
-        this.strength = 50;
-        this.lvl = 1;
+        this.health = health;
+        this.gold = gold;
+        this.agility = agility;
+        this.experience = experience;
+        this.strength = strength;
+        this.lvl = lvl;
     }
     @Override
     int attack() {
@@ -34,11 +34,12 @@ public class Player extends Character{
         this.agility += 10;
         this.health += 10;
         this.lvl += 1;
-        System.out.println("Поздравляем, уровень вашего персонажа поднялся до" + this.lvl + " уровня!");
+        System.out.println("Поздравляем, уровень вашего персонажа поднялся до " + this.lvl + " уровня!");
     }
 
     void gainExperience(int experience) {
         this.experience += experience;
+        System.out.println("Вы получили " + experience + " единиц опыта." + " Ваш Уровень: " + this.lvl+ ", Здоровье: " + this.health );
         if (this.experience >= 100) {
             this.levelUp();
             this.experience = 0;

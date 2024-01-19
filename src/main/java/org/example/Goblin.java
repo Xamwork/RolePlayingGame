@@ -6,11 +6,11 @@ public class Goblin extends Character{
 
     public Goblin(String name, int health, int gold, int agility, int experience, int strength) {
         this.name = name;
-        this.health = 500;
-        this.gold = 50;
-        this.agility = 20;
-        this.experience = 0;
-        this.strength = 50;
+        this.health = health;
+        this.gold = gold;
+        this.agility = agility;
+        this.experience = experience;
+        this.strength = strength;
     }
 
     @Override
