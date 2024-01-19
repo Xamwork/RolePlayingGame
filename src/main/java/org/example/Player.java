@@ -25,26 +25,27 @@ public class Player extends Character{
             }
             return this.strength; // normal hit
         } else {
-            return 0;
+            return 0; // miss
         }
     }
 
-
-    public void levelUp() {
+    void levelUp() {
         this.strength += 10;
         this.agility += 10;
         this.health += 10;
+        this.lvl += 1;
+        System.out.println("Поздравляем, уровень вашего персонажа поднялся до" + this.lvl + " уровня!");
     }
 
-    public void gainExperience(int experience) {
+    void gainExperience(int experience) {
         this.experience += experience;
         if (this.experience >= 100) {
             this.levelUp();
-            this.experience -= 100;
+            this.experience = 0;
         }
     }
 
-    public void heal(int health) {
+    void heal(int health) {
         this.health += health;
     }
 }
