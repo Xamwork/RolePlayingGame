@@ -9,10 +9,7 @@ public abstract class Character {
     int experience;
     int strength;
 
-    abstract void attack();
-
-    abstract void criticalAttack();
-
+    abstract int attack();
 
 
 }
