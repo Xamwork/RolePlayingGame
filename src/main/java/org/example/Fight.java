@@ -45,6 +45,7 @@ public class Fight implements Runnable{
             System.out.println("Вы погибли.");
         } else {
             System.out.println("Вы убили монстра " + enemy.name + ".");
+            System.out.println("************");
             player.gainExperience(enemy.experience);
             player.gold += enemy.gold;
             System.out.println("Получено " + enemy.gold + " золота." + " Всего золота: " + player.gold);
