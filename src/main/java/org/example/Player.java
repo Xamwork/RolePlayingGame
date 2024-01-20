@@ -39,11 +39,11 @@ public class Player extends Character{
 
     void gainExperience(int experience) {
         this.experience += experience;
-        System.out.println("Вы получили " + experience + " единиц опыта." + " Ваш Уровень: " + this.lvl+ ", Здоровье: " + this.health );
         if (this.experience >= 100) {
             this.levelUp();
             this.experience = 0;
         }
+        System.out.println("Вы получили " + experience + " единиц опыта." + " Ваш Уровень: " + this.lvl+ ", Здоровье: " + this.health );
     }
 
     void heal(int health) {
